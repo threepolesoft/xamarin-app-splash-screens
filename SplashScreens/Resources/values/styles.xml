@@ -1,0 +1,26 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+	<!-- Base application theme. -->
+	<style name="MyTheme">
+		<!-- Customize your theme here. -->
+
+		<item name="android:windowActivityTransitions">true</item>
+		<item name="android:forceDarkAllowed">true</item>
+		<item name="android:textColor">#00020F</item>
+		<item name="android:textColorSecondary">#737884</item>
+		<item name="android:textSize">16sp</item>
+		<item name="android:logo">@mipmap/appicon</item>
+		<item name="android:windowLightNavigationBar" tools:ignore="NewApi" tools:targetApi="o_mr1">true</item>
+	</style>
+
+
+
+
+
+
+
+
+
+	
+
+</resources>
