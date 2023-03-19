@@ -1,44 +1,33 @@
 using Android.Content;
 using Android.OS;
 using Android.Runtime;
+using Android.Views;
+using AndroidX.AppCompat.App;
 using Java.Lang;
 using Exception = System.Exception;
 
 namespace SplashScreens
 {
-    public class MainActivity : Application
+
+    [Activity(Label = "@string/app_name", MainLauncher = true)]
+    public class MainActivity : AppCompatActivity
     {
-        public Activity Activity;
-
-        public override void OnCreate()
+        protected override void OnCreate(Bundle savedInstanceState)
         {
-            try
-            {
-                base.OnCreate();
-                new Handler(Looper.MainLooper).Post(new Runnable(FirstRunExcite));
-            }
-            catch (Exception exception)
-            {
+            AndroidX.Core.SplashScreen.SplashScreen.InstallSplashScreen(this);
 
-            }
+            base.OnCreate(savedInstanceState);
+
+            // Include this if using the Splash Screen API - rotate to Landscape on a device with a notch to see why - with this code commented.
+            if (Build.VERSION.SdkInt >= BuildVersionCodes.P)
+                Window.Attributes.LayoutInDisplayCutoutMode = LayoutInDisplayCutoutMode.Default;
+
+            // If you want to get a good look at the icon to check it. Don't forget remove from production code
+            //System.Threading.Thread.Sleep(1000);
+
+            // Set our view from the "main" layout resource
+            SetContentView(Resource.Layout.activity_main);
         }
 
-        private void FirstRunExcite()
-        {
-            try
-            {
-                Intent intent = new Intent(Activity, typeof(Activities.SplashScreenActivity));
-                intent.AddCategory(Intent.CategoryHome);
-                intent.PutExtra("crash", true);
-                intent.SetAction(Intent.ActionMain);
-                intent.AddFlags(ActivityFlags.ClearTop | ActivityFlags.NewTask | ActivityFlags.ClearTask);
-
-
-                Activity.Finish();
-            }
-            catch (Exception exception)
-            {
-            }
-        }
     }
 }

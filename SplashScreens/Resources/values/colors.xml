@@ -1,20 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
-	<!--@color/primary-->
-	<!--@color/accent-->
-	<!--@color/gnt_white-->
-	<!--Get colors from: http://www.materialpalette.com/-->
-
-	<color name="accent">#0F64F7</color>
-	<color name="primary">#0041b3</color>
-
-	<color name="accent_transparent">#800F64F7</color>
-	<color name="primary_transparent">#300041b3</color>
-
-	<color name="primaryDark">#022e7a</color>
-	<color name="primaryLight">#BBDEFB</color>
-
-
-
-	
+	<color name="colorPrimary">#2c3e50</color>
+	<color name="colorPrimaryDark">#1B3147</color>
+	<color name="colorAccent">#3498db</color>
 </resources>

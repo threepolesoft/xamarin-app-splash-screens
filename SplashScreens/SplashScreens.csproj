@@ -17,8 +17,8 @@
     <None Remove="Resources\values\styles.xml" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="SplashScreenCore">
-      <HintPath>..\Api\SplashScreenCore.dll</HintPath>
-    </Reference>
+    <PackageReference Include="Xamarin.AndroidX.AppCompat" Version="1.6.0.1" />
+    <PackageReference Include="Xamarin.AndroidX.Core.SplashScreen" Version="1.0.0.3" />
+    <PackageReference Include="Xamarin.Google.Android.Material" Version="1.8.0" />
   </ItemGroup>
 </Project>
