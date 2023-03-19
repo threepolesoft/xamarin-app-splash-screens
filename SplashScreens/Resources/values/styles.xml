@@ -10,7 +10,13 @@
 		<item name="android:textColorSecondary">#737884</item>
 		<item name="android:textSize">16sp</item>
 		<item name="android:logo">@mipmap/appicon</item>
-		<item name="android:windowLightNavigationBar" tools:ignore="NewApi" tools:targetApi="o_mr1">true</item>
+
+		<item name="android:windowLightNavigationBar" tools:ignore="NewApi" tools:targetApi="kitkat">
+			true
+		</item>
+		<item name="android:windowTranslucentNavigation" tools:ignore="NewApi" tools:targetApi="kitkat">
+			true
+		</item>
 	</style>
 
 

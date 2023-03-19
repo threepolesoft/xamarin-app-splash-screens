@@ -2,10 +2,11 @@ using Android.App;
 using Android.Content;
 using Android.Content.PM;
 using Android.OS;
+using Android.Views;
 
 namespace SplashScreens.Activities;
 
-[Activity(Icon = "@mipmap/appicon", MainLauncher = true, NoHistory = true, Theme = "@style/MyTheme", ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+[Activity(Icon = "@drawable/icon", MainLauncher = true, NoHistory = true, Theme = "@style/MyTheme", ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
 
 public class SplashScreenActivity : Activity
 {
@@ -17,6 +18,9 @@ public class SplashScreenActivity : Activity
                 Androidx.Core.Splashscreen.SplashScreen.InstallSplashScreen(this);
 
             base.OnCreate(savedInstanceState);
+
+            Config.Settings.FullScreen(this);
+
 
             SetContentView(Resource.Layout.Splash);
 
